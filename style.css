@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(fontes/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url(fontes/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url(fontes/Montserrat-Medium.ttf);
+  font-weight: 600;
+}
+
+/*Variáveis*/
+:root {
+  --bgSite: #f6f6f6;
+  --bgCard: #ebe9ea;
+
+  --white: #fff;
+
+  --title: #181818;
+  --text: #474747;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: auto;
+}
+
+.promocoes h2,
+.rodape p {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--title);
+  color: var(--white);
+  font-family: 'Montserrat-SemiBold';
+  font-size: 14px;
+}
+
+.tiulo {
+  padding: 13px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Montserrat-Medium';
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 27px;
+  justify-content: center;
+  color: white;
+  height: 378px;
+  background: url('img/wallpaper.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.titulo-banner h2 {
+  font-size: 1.6rem;
+  font-family: 'Montserrat-Medium';
+}
+
+.titulo-banner p {
+  line-height: 30px;
+  max-width: 100%;
+  font-family: 'Montserrat-SemiBold';
+  font-size: 16px;
+}
+
+.titulo-produtos h1 {
+  margin: 50px 0 5px 0;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Montserrat-Bold';
+}
+
+.titulo-produtos p {
+  margin: 0 auto;
+  width: 90%;
+  line-height: 25px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Montserrat-SemiBold';
+  color: var(--text);
+}
+
+.produtos {
+  display: grid;
+  max-width: 100%;
+  justify-content: center;
+  margin: 30px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  gap: 30px;
+}
+
+.produtos img {
+  background-color: var(--bgCard);
+  padding: 76px 25px;
+}
+
+/* Resolução 999 */
+
+@media (min-width: 999px) {
+  .produtos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    gap: 39px 13px;
+  }
+
+  .titulo-banner h2 {
+    font-size: 2rem;
+  }
+  
+  .titulo-banner p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Resolução 1250 */
+
+@media (min-width: 1249px) {
+  .produtos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+    gap: 13px;
+  }
+
+  .titulo-banner h2 {
+    
+    font-size: 2rem;
+  }
+  
+  .titulo-banner p {
+    margin-top: 20px;
+    font-size: 1.3rem;
+  }
+
+  .titulo-banner {
+    margin-left: 100px;
+    width: 480px;
+  }
+}
+
+/* Resolução 1039 */
+
+@media (min-width: 1249px) {
+  .produtos {
+    margin: 59px 100px 100px 100px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 300px));
+    gap: 20px;
+  }
+}
